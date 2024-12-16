@@ -63,17 +63,12 @@ class RecursiveCharacterTextSplitter:
                 new_separators = separators[i + 1 :]
                 break
 
-        print('>>> seperator', repr(separator))
-
         splits = _split_text_with_regex(
             text,
             separator,
             self._keep_separator,
         )
 
-        print('>>>> splits', json.dumps(splits, indent=4))
-
-        ### TBC
         # Now go merging things, recursively splitting longer texts.
         _good_splits = []
         _separator = '' if self._keep_separator else separator
