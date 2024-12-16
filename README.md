@@ -4,6 +4,8 @@
 2. optimize the chunks by the defined chunk size and chunk overlapping
 3. the chunk length is usually measured LLM tokens
 
+### examples
+
 | **Scenario**                     | **Input**                                                                                                                                                   | **Output**                                                                                                          | **Description**                                                                                                                                                 |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1: Simple Text Within Chunk Size | `text = "This is a simple test text."`<br>`chunk_size=50, chunk_overlap=10`                                                                                 | `["This is a simple test text."]`                                                                                   | The text is shorter than the `chunk_size` (50). It is returned as a single chunk.                                                                               |
